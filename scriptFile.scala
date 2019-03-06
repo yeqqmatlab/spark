@@ -1,0 +1,1 @@
+implicit def intToR(x:Int) = new R
