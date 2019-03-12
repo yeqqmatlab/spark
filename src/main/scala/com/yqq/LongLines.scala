@@ -4,6 +4,14 @@ import scala.io.Source
 object LongLines {
 
   def processFile(filename: String, width: Int){
+
+    def processLine(filename: String, width: Int, line: String){
+      if(line.length() > width){
+        println(filename+":"+line.trim())
+      }
+
+    }
+
     val sources = Source.fromFile(filename)
     for (line <- sources.getLines()){
       processLine(filename,width,line)
@@ -11,15 +19,11 @@ object LongLines {
 
   }
 
-  def processLine(filename: String, width: Int, line: String){
-    if(line.length > width){
-      println(filename+":"+line.trim)
-    }
 
-  }
 
   def main(args: Array[String]): Unit = {
-    LongLines.processFile("/Users/yqq/data/words.txt",16)
+    LongLines.processFile("/Users/yqq/data/words.txt",14)
   }
+
 
 }
