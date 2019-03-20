@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 MINPARAMS=10
 
@@ -19,4 +19,9 @@ fi
 
 echo "---------------------------------------"
 
-echo "a"
+echo the number of this command-line parameters are: $#
+echo All the command-line parameters are: $*
+echo the proess of this script: $$
+echo the last proess of this script: $!
+echo the code of status: $?
+
